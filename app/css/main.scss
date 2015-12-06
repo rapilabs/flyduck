@@ -1,0 +1,83 @@
+@import '../bootstrap/scss/bootstrap.scss';
+
+html,
+body,
+.app,
+.sidebar,
+.content
+{
+    height: 100%;
+}
+
+html {
+    font-family: -apple-system, ".SFNSDisplay-Regular", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+
+    .content {
+        flex: 1;
+    }
+}
+
+.sidebar {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 190px;
+    padding: 0;
+    background-color: #171D1F;
+    color: #90989c;
+
+    header {
+        border-bottom: 1px solid #30393B;
+        height: 50px;
+        padding: 14px;
+    }
+    .channels {
+        flex: 1;
+
+        padding: 14px;
+        font-size: 13px;
+
+        h1 {
+            font-size: 0.923rem;
+        }
+    }
+    footer {
+        border-top: 1px solid #30393B;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+
+        button {
+            flex: 1;
+            background: none;
+            border: none;
+            height: 100%;
+            &:first-child {
+                border-right: 1px solid #30393B;
+            }
+        }
+    }
+}
+
+.content {
+    @include make-col();
+    @include make-col-span(10);
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        height: 50px;
+        border-bottom: 1px solid #C0C0C0;
+    }
+    .main {
+        flex: 1;
+    }
+}
