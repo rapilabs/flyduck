@@ -6,30 +6,47 @@
    <title>flyduck</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/main.css">
  </head>
  <body>
   <div class="app">
    <div class="sidebar">
-    <header>david</header>
+    <header>
+     <button class="user-menu">david</button>
+     <div class="spacer"></div>
+     <button class="fa fa-bell"></button>
+    </header>
     <div class="channels">
      <h1>COMMON CODE</h1>
      <ul>
-      <li>Common Code</li>
-      <li>Grumpy Coder's Club</li>
+      <li><a href="#">Common Code</a></li>
+      <li><a href="#">Grumpy Coder's Club</a></li>
      </ul>
      <h1>1-TO-1S</h1>
     </div>
     <footer>
-     <button>shrink</button>
-     <button>more</button>
+     <button class="fa fa-caret-square-o-left"></button>
+     <button class="fa fa-plus"></button>
     </footer>
    </div>
    <div class="content">
-    <header></header>
+    <header>
+     <button><i class="fa fa-lock"></i> 2/5 online</button>
+     <ul>
+      <li><a href="#" class="avatar david"></a></li>
+      <li><a href="#" class="avatar brenton"></a></li>
+     </ul>
+     <button><i class="fa fa-plus"></i> Add people</button>
+    </header>
     <div class="main">
-     <h2>main chat panel</h2>
+     <div class="line">derp</div>
+     <div class="line">herp</div>
     </div>
+    <form class="chat-entry">
+     <textarea placeholder="Type to chat in the Common Code flow…"></textarea>
+     <button>Send</button>
+    </form>
    </div>
   </div>
  </body>

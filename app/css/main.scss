@@ -1,4 +1,77 @@
-@import '../bootstrap/scss/bootstrap.scss';
+// @import '../../bootstrap/scss/bootstrap.scss';
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// my stuff
+
+button, label {
+    cursor: pointer;
+}
+// ol, ul {
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
+// }
+
+button {
+    color: inherit;
+    border: none;
+    background: none;
+}
+a, a:active, a:hover, a:focus, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+textarea {
+    resize: none;
+}
 
 html,
 body,
@@ -36,15 +109,49 @@ html {
         border-bottom: 1px solid #30393B;
         height: 50px;
         padding: 14px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        
+        .user-menu {
+            height: 30px;
+            &::before {
+                background-image: url('/img/david.jpeg');
+                background-size: cover;
+                background-position: left center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                content: "";
+                display: inline-block;
+                border-radius: 15px;
+            }
+        }
+        .spacer {
+            flex: 1;
+        }
     }
     .channels {
         flex: 1;
 
-        padding: 14px;
         font-size: 13px;
 
         h1 {
-            font-size: 0.923rem;
+            font-size: 12px;
+            padding: 15px 5px;
+            color: #666;
+        }
+
+        a {
+            padding: 10px 15px;
+            display: block;
+        }
+        a:hover {
+            color: white;
+        }
+        a:active {
+            color: white;
+            background-color: #3a3f40;
         }
     }
     footer {
@@ -66,9 +173,6 @@ html {
 }
 
 .content {
-    @include make-col();
-    @include make-col-span(10);
-
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -76,8 +180,76 @@ html {
     header {
         height: 50px;
         border-bottom: 1px solid #C0C0C0;
+        display: flex;
+
+        button {
+            color: #777;
+            font-size: 13px;
+        }
+        button:hover {
+            color: #424242;
+            border: 1px solid #C0C0C0;
+            border-radius: 2px;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            &.david {
+                background-image: url('/img/david.jpeg');
+            }
+            &.brenton {
+                background-image: url('/img/brenton.jpeg');
+            }
+            background-size: cover;
+            background-position: left center;
+            background-repeat: no-repeat;
+            height: 30px;
+            width: 30px;
+            content: "";
+            display: inline-block;
+            border-radius: 15px;
+            margin-left: 5px;
+       }
     }
     .main {
         flex: 1;
+        .line {
+            border-top: 1px solid rgb(228, 228, 228);
+            padding: 9px 20px 10px 40px;
+            font-size: 13px;
+        }
+    }
+    .chat-entry {
+        padding: 10px;
+        height: 40px;
+        background: #f9f9f9;
+        border-top: 1px solid #C0C0C0;
+        display: flex;
+        flex-direction: row;
+
+        textarea {
+            border-top: 1px solid #999;
+            border-right: 1px solid #999;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            font-size: 13px;
+            // width: 100%;
+            padding: 10px;
+            // min-height: 2.923rem;
+            flex: 1;
+        }
+
+        button {
+            border-top: 1px solid #999;
+            border-right: 1px solid #999;
+            border-bottom: 1px solid #999;
+            border-left: none;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
     }
 }
