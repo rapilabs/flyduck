@@ -2,6 +2,8 @@
   "name": "flyduck",
   "version": "1.0.0",
   "dependencies": {
+    "autobind-decorator": "^1.3.2",
+    "babel-plugin-transform-decorators-legacy": "^1.2.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   },
@@ -10,6 +12,7 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
     "webpack": "^1.12.9"
   }
 }
